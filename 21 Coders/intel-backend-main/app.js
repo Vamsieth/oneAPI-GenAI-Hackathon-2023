@@ -78,7 +78,7 @@ function handleJsonData(req, res) {
 
 
 const openai = new openAI({
-  apiKey: gptApiKey;
+  apiKey: gptApiKey
 });
 
 async function checkPriority() {
