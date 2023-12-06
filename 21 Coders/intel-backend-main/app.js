@@ -6,6 +6,7 @@ const { Sequelize } = require("sequelize");
 const app = express();
 
 const openAI = require('openai');
+const gptApiKey = process.env.GPT3_API_KEY;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Parse JSON bodies
@@ -77,7 +78,7 @@ function handleJsonData(req, res) {
 
 
 const openai = new openAI({
-  apiKey: "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",
+  apiKey: gptApiKey;
 });
 
 async function checkPriority() {
